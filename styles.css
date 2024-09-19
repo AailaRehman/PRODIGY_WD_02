@@ -1,0 +1,156 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
+
+.stopwatch {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 320px;
+    box-sizing: border-box; 
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+#display {
+    font-size: 60px;
+    margin-bottom: 30px;
+    color: #555;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    flex: 1;
+    min-width: 90px;
+    margin: 10px 5px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+#startStopBtn {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+#resetBtn {
+    background-color: #f44336;
+    color: #fff;
+}
+
+#lapBtn {
+    background-color: #2196f3;
+    color: #fff;
+}
+
+#startStopBtn:hover {
+    background-color: #45a049;
+}
+
+#resetBtn:hover {
+    background-color: #e53935;
+}
+
+#lapBtn:hover {
+    background-color: #1e88e5;
+}
+
+#laps {
+    margin-top: 30px;
+    list-style-type: none;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    border-top: 1px solid #ddd;
+}
+
+#laps li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    color: #666;
+}
+
+#laps::-webkit-scrollbar {
+    width: 6px;
+}
+
+#laps::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+    .stopwatch {
+        padding: 30px;
+    }
+
+    #display {
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stopwatch {
+        padding: 20px;
+    }
+
+    #display {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+
+    .btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    #laps li {
+        font-size: 14px;
+    }
+}
